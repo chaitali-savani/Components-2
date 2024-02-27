@@ -1,16 +1,18 @@
-export default function ProductCard({name,description,price,imageUrl,isInstock}) {
+export default function ProductCard({product}) {
   return (
-    <>
+    <div style={{border="black"}}>
+
       <h3>
-        {name}
+        {product.name}
       </h3>
       <p>
-       {description}
+       {product.description}
       </p>
-      <div className="price">{price}</div>
-      <img src={imageUrl} alt="hp 15" />
-      <div className="isInStock">{!isInstock && <h6>Unavailable</h6>}</div>
+      <div className="price">{product.price}</div>
+      <img src={product.imageUrl} alt="hp 15" />
+      <div className="isInStock">{!product.isInStock && <h6>Unavailable</h6>}</div>
+    
       <button>Add to Cart</button>
-    </>
+    </div>
   );
 }

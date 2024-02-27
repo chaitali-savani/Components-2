@@ -1,12 +1,11 @@
 import ProductCard from "./ProductCard";
 
-export default function ProductCardContainer() {
+export default function ProductCardContainer({products}) {
   return (
     <>
+      {console.log(products)}
       <h1>Discover Your Favorites</h1>
-      <ProductCard />
-      <ProductCard />
-      <ProductCard />
+      {products.map((product)=><ProductCard product={product}/>)}
     </>
   );
 }

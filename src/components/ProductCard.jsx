@@ -1,6 +1,6 @@
 export default function ProductCard({product}) {
   return (
-    <div style={{border="black"}}>
+    <div style={{border: '1px solid black', padding: '10px'}}>
 
       <h3>
         {product.name}
